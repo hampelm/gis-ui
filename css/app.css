@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+
+body {
+  font-family: "Source Sans Pro", "Helvetica Neue", sans-serif;
+  font-size: 0.9em;
+  color: #45403e;
+  padding: 0;
+  height: 100vh;
+}
+
+a {
+  color: #036;
+  text-decoration: none
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Source Sans Pro", "Helvetica Neue", sans-serif;
+  font-weight: normal;
+}
+
+.ribbon {
+  height: 108px;
+  border-bottom: 2px solid #cbc8c7;
+}
+
+#footer {
+  height: 16px;
+  padding: 2px;
+}
+
+.tabs,
+.tools {
+  overflow: auto;
+  font-weight: 300;
+}
+
+.tools {
+  padding: 5px 10px;
+}
+
+.tabs {
+  background: #036;
+  border-top: 2px solid #036;
+}
+
+.tabs li,
+.tabs a {
+  color: #fff;
+}
+
+.tabs .active a {
+  color: #036;
+  background: #fff;
+  border-top-right-radius: 4px;
+  border-top-left-radius:  4px;
+}
+
+.tabs li,
+.tools li {
+  display: inline-block;
+  float: left;
+}
+
+.tools li {
+  margin-right: 10px;
+  padding-right: 0;
+  border-right: 1px solid #eee;
+  height: 70px;
+  overflow: auto;
+}
+
+.tabs li a,
+.tools li a {
+  display: inline-block;
+  text-align: center;
+}
+
+.tools .disabled a {
+  color: #666;
+}
+
+.tools .icon {
+  font-size: 1.5em;
+  display: block;
+}
+
+.tabs li {
+  font-weight: 400;
+}
+
+.tabs li a,
+.tabs .logo,
+.tools li a {
+  padding: 5px 10px;
+}
+
+#layers h2,
+.tools li h2 {
+  clear: both;
+  display: block;
+  width: 100%;
+
+  font-size: 0.9em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.tools li ul {
+  display: inline-block;
+}
+
+.tools li li {
+  padding-right: 10px;
+  border-right: 0;
+  height: auto;
+}
+
+.tools li li a {
+  height: auto;
+  display: inline-block;
+  float: left;
+  padding: 2px;
+}
+
+#container {
+  height: calc(100vh - 130px);
+}
+
+.sidebar,
+#map {
+  float: left;
+  height: calc(100vh - 130px);
+}
+
+.sidebar {
+  background: #fff;
+  width: 15vw;
+}
+
+
+
+
+#layers {
+  border-right: 1px solid #fff;
+  height: calc(100vh - 130px);
+  position: relative;
+}
+
+#layers h2 {
+  padding: 10px 10px 0px 10px;
+}
+
+.layer {
+  padding: 0.8em 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.layer .tool {
+  font-size: 0.9em;
+  display: inline-block;
+  margin-right: 4px;
+}
+
+#layertools {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  overflow: auto;
+}
+
+#layertools a {
+  display: inline-block;
+  padding: 5px 8px;
+  text-transform: uppercase;
+}
+
+#map {
+  width: 85vw;
+  background: #eee;
+}

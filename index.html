@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="css/app.css" rel="stylesheet" media="screen">
+
+    <link rel="stylesheet" href="css/leaflet.css" />
+  </head>
+  <body>
+    <div class="ribbon">
+      <ul class="tabs">
+        <li class="logo">ugis</li>
+        <li><a href="#">View</a></li>
+        <li class="active"><a href="#">Draw</a></li>
+        <li><a href="#">Transform</a></li>
+        <li><a href="#">Data</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+
+      <ul class="tools">
+        <li>
+          <h2>Draw</h2>
+          <ul>
+            <li class="active"><a href="#" id="draw-point">
+              <span class="icon"><i class="fa fa-map-marker"></i></span>
+              <span class="label">Point</span>
+            </a></li>
+            <li class="disabled"><a href="#" id="draw-line">
+              <span class="icon"><i class="fa fa-minus"></i></span>
+              <span class="label">Line</span>
+            </a></li>
+            <li class="disabled"><a href="#" id="draw-polygon">
+              <span class="icon"><i class="fa fa-connectdevelop"></i></span>
+              <span class="label">Polygon</span></a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <!--
+      <ul class="tools">
+        <li>
+          <h2>Transformation</h2>
+          <ul>
+            <li><a href="#"><span class="label">Simplify</span></a></li>
+            <li><a href="#"><span class="label">Buffer</span></a></li>
+            <li><a href="#"><span class="label">Merge</span></a></li>
+            <li><a href="#"><span class="label">Intersect</span></a></li>
+            <li><a href="#"><span class="label">Explode</span></a></li>
+            <li><a href="#"><span class="label">Erase</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h2>Measurement</h2>
+          <ul>
+            <li><a href="#"><span class="label">Distance</span></a></li>
+            <li><a href="#"><span class="label">Area</span></a></li>
+            <li><a href="#"><span class="label">Bearing</span></a></li>
+            <li><a href="#"><span class="label">Line Length</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h2>Random</h2>
+          <ul>
+            <li><a href="#"><span class="label">Points</span></a></li>
+            <li><a href="#"><span class="label">Polygons</span></a></li>
+          </ul>
+        </li>
+        <li>
+          <h2>Grids</h2>
+          <ul>
+            <li><a href="#"><span class="label">Squares</span></a></li>
+            <li><a href="#"><span class="label">Hex</span></a></li>
+            <li><a href="#"><span class="label">Triangles</span></a></li>
+            <li><a href="#"><span class="label">Points</span></a></li>
+          </ul>
+        </li>
+      </ul>
+      -->
+    </div>
+
+    <div id="container">
+      <div class="sidebar">
+        <div id="layers">
+          <h2>Layers</h2>
+          <div class="layergroup">
+          </div>
+          <div id="layertools">
+            <a href="#">+ Blank</a>
+            <a href="#">+ Vector</a>
+            <a href="#">+ Tile</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="map"></div>
+    </div>
+
+    <div id="footer">
+      x, y, z
+    </div>
+
+    <script type="text/template" id="template-layer">
+      <div class="layer">
+        <a class="tool visibility" href="#">
+          <span class="icon"><i class="fa fa-eye"></i></span>
+        </a>
+        <a class="tool remove" href="#">
+          <span class="icon"><i class="fa fa-trash"></i></span>
+        </a>
+        <span class="icon"><i class="fa fa-map-marker"></i></span>
+        <span class="name" contentEditable="true">Point layer</span>
+      </div>
+    </script>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.js"></script>
+    <script src="js/leaflet.js"></script>
+    <script src="js/leaflet.utfgrid.js"></script>
+    <script src="js/leaflet.editable.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
